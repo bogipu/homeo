@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pusztai Gyöngyi – Homeopátia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Nunito:wght@300;500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary: #7fbba7;   /* pasztell zöld */
+      --accent: #dfeeea;    /* halvány háttér */
+      --text: #333;
+      --light: #fafafa;
+    }
+    body {
+      margin: 0;
+      font-family: 'Nunito', sans-serif;
+      color: var(--text);
+      background-color: var(--light);
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background: linear-gradient(to bottom right, #f8fffc, #e9f7f1);
+      padding: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::after {
+      content: "";
+      position: absolute;
+      width: 600px;
+      height: 600px;
+      background: var(--accent);
+      border-radius: 50%;
+      top: -200px;
+      right: -200px;
+      z-index: 0;
+    }
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.8rem;
+      margin: 0;
+      font-weight: 600;
+      color: var(--primary);
+      z-index: 1;
+      position: relative;
+    }
+    .hero p {
+      margin-top: 1rem;
+      font-size: 1.2rem;
+      font-weight: 300;
+      z-index: 1;
+      position: relative;
+    }
+
+    /* ABOUT */
+    .about {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2rem;
+      align-items: center;
+      padding: 4rem 2rem;
+      max-width: 1100px;
+      margin: auto;
+    }
+    .about img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+    }
+    .about-text h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      margin-bottom: 1rem;
+      font-size: 2rem;
+    }
+    .about-text p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* SERVICES */
+    .services {
+      background: var(--accent);
+      padding: 4rem 2rem;
+    }
+    .services h2 {
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      margin-bottom: 2rem;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .card {
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 6px 20px rgba(0,0,0,0.06);
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+    }
+    .card span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    /* QUOTE */
+    blockquote {
+      margin: 3rem auto;
+      max-width: 700px;
+      font-style: italic;
+      font-size: 1.3rem;
+      text-align: center;
+      color: #555;
+      padding: 1rem;
+    }
+
+    /* CONTACT */
+    .contact {
+      text-align: center;
+      padding: 4rem 2rem;
+    }
+    .contact h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--primary);
+      margin-bottom: 1rem;
+    }
+    .contact p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--primary);
+      color: white;
+      text-align: center;
+      padding: 1.5rem;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .about {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1>Pusztai Gyöngyi</h1>
+    <p>Homeopátia – Természetes egyensúly testnek és léleknek</p>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about">
+    <div class="about-text">
+      <h2>Bemutatkozás</h2>
+      <p>
+        Pusztai Gyöngyi vagyok, homeopata. Hiszek abban, hogy a természet 
+        gyógyító ereje mindannyiunkban ott rejlik. A homeopátia finoman, 
+        mellékhatások nélkül támogatja a szervezet öngyógyító folyamatait. 
+        Személyre szabott konzultációkkal segítem klienseimet a testi és lelki 
+        harmónia megteremtésében.
+      </p>
+    </div>
+    <img src="P1170627.jpg" alt="Pusztai Gyöngyi" style="width: 80%; height: 80%; object-fit: cover;">
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services">
+    <h2>Szolgáltatások</h2>
+    <div class="cards">
+        <div class="card">
+            <span>🌿</span>
+            Homeopátiás konzultáció
+          </div>
+          <div class="card">
+            <span>👩‍⚕️</span>
+            Állapotfelmérés és tanácsadás
+          </div>
+          <div class="card">
+            <span>🌸</span>
+            Természetes gyógymódok támogatása
+          </div>
+          <div class="card">
+            <span>👶</span>
+            Gyermekek és felnőttek kezelése
+          </div>
+          <div class="card">
+            <span>🌙</span>
+            Stresszoldás és alvászavarok támogatása
+          </div>
+          <div class="card">
+            <span>💧</span>
+            Immunrendszer erősítése természetes módon
+          </div>
+    </div>
+  </section>
+
+  <!-- QUOTE -->
+  <section>
+    <blockquote>
+      „A természetben minden megtalálható, ami a gyógyuláshoz szükséges.”
+    </blockquote>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact">
+    <h2>Kapcsolat</h2>
+    <p>
+      Konzultáció időpont egyeztetéssel.<br>
+      📍 Helyszín: Budapesten vagy online<br>
+      📧 E-mail: homeogyongyi@gmail.com <br>
+      📞 Telefon: +36 20 432 3132
+    </p>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Pusztai Gyöngyi – Homeopátia</p>
+  </footer>
+
+</body>
+</html>
